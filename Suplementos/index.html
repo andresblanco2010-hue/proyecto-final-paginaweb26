@@ -1,65 +1,215 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gym Supplements</title>
+
+    <title>GYM SUPPLEMENTS</title>
+
     <link rel="stylesheet" href="estilos.css">
 </head>
+
 <body>
 
-<header>
-    <h1>GYM <span>SUPPLEMENTS</span></h1>
+    <!-- ENCABEZADO -->
+    <header>
 
-    <nav>
-        <a href="#inicio">Inicio</a>
-        <a href="#productos">Productos</a>
-        <a href="#beneficios">Beneficios</a>
-        <a href="#contacto">Contacto</a>
-    </nav>
-</header>
-
-<main>
-
-    <!-- DIAPOSITIVA 1 -->
-    <section class="slide activa" id="inicio">
-        <div class="contenido">
-            <h2>PROTEÍNA <span>WHEY</span></h2>
-            <p>Conoce los suplementos deportivos y aprende sobre su uso responsable.</p>
-            <a href="#productos" class="boton">Ver productos</a>
+        <div class="logo">
+            <h1>GYM <span>SUPPLEMENTS</span></h1>
         </div>
+
+        <!-- MENÚ DE NAVEGACIÓN -->
+        <nav>
+
+            <a href="#" class="nav-link activo" data-slide="0">
+                Inicio
+            </a>
+
+            <a href="#" class="nav-link" data-slide="1">
+                Productos
+            </a>
+
+            <a href="#" class="nav-link" data-slide="2">
+                Información
+            </a>
+
+            <a href="#contacto" id="navContacto">
+                Contacto
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- DIAPOSITIVAS PRINCIPALES -->
+    <main>
+
+        <!-- DIAPOSITIVA 1 -->
+        <section class="slide activa" id="inicio">
+
+            <div class="contenido">
+
+                <h2>PROTEÍNA <span>WHEY</span></h2>
+
+                <p>
+                    Conoce la proteína Whey, sus características
+                    y su importancia en la nutrición deportiva.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- DIAPOSITIVA 2 -->
+        <section class="slide" id="productos">
+
+            <div class="contenido">
+
+                <h2>CREATINA <span>MONOHIDRATO</span></h2>
+
+                <p>
+                    Descubre qué es la creatina y conoce
+                    sus características y precauciones.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- DIAPOSITIVA 3 -->
+        <section class="slide" id="informacion">
+
+            <div class="contenido">
+
+                <h2>INFORMACIÓN <span>DEPORTIVA</span></h2>
+
+                <p>
+                    Aprende sobre entrenamiento, alimentación
+                    equilibrada y cuidado de la salud.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- APARTADO DE NUTRICIÓN -->
+    <section id="apartadoNutricion" class="apartado-nutricion">
+
+        <div class="nutricion-contenido">
+
+            <h2>NUTRICIÓN <span>DEPORTIVA</span></h2>
+
+            <p>
+                Conoce más sobre nutrición deportiva,
+                suplementos y alimentación equilibrada.
+                Cuida tu salud y bienestar.
+            </p>
+
+            <img
+                src="imagenes/nutricion.png"
+                alt="Dos deportistas presentando un producto de creatina"
+            >
+
+            <div class="informacion-extra">
+
+                <h3>Una buena alimentación importa</h3>
+
+                <p>
+                    Una alimentación variada y equilibrada,
+                    junto con actividad física adecuada,
+                    ayuda a cuidar tu salud.
+                </p>
+
+            </div>
+
+            <button id="volverInicio">
+                ← Volver al inicio
+            </button>
+
+        </div>
+
     </section>
 
-    <!-- DIAPOSITIVA 2 -->
-    <section class="slide" id="productos">
-        <div class="contenido">
-            <h2>CREATINA <span>MONOHIDRATO</span></h2>
-            <p>Conoce qué es la creatina, sus características y sus precauciones.</p>
-            <a href="#beneficios" class="boton">Conocer más</a>
+
+    <!-- SERVICIOS -->
+    <section class="servicios">
+
+        <!-- ENTRENAMIENTO -->
+        <div class="servicio">
+
+            <span>🏋️</span>
+
+            <h3>Entrenamiento</h3>
+
+            <p>Actividad física responsable</p>
+
         </div>
+
+
+        <!-- NUTRICIÓN -->
+        <a href="#" class="servicio" id="abrirNutricion">
+
+            <span>🥗</span>
+
+            <h3>Nutrición</h3>
+
+            <p>Alimentación equilibrada</p>
+
+        </a>
+
+
+        <!-- SALUD -->
+        <div class="servicio">
+
+            <span>❤️</span>
+
+            <h3>Salud</h3>
+
+            <p>Cuidado y bienestar</p>
+
+        </div>
+
+
+        <!-- DEPORTE -->
+        <div class="servicio">
+
+            <span>💪</span>
+
+            <h3>Deporte</h3>
+
+            <p>Hábitos saludables</p>
+
+        </div>
+
     </section>
 
-    <!-- DIAPOSITIVA 3 -->
-    <section class="slide" id="beneficios">
-        <div class="contenido">
-            <h2>INFORMACIÓN <span>DEPORTIVA</span></h2>
-            <p>Infórmate, entrena de forma responsable y cuida tu salud.</p>
-            <a href="#contacto" class="boton">Contactar</a>
-        </div>
-    </section>
 
-</main>
+    <!-- PIE DE PÁGINA -->
+    <footer id="contacto">
 
-<div class="controles">
-    <button onclick="cambiar(-1)">❮</button>
-    <span id="numero">1 / 3</span>
-    <button onclick="cambiar(1)">❯</button>
-</div>
+        <h2>GYM <span>SUPPLEMENTS</span></h2>
 
-<footer id="contacto">
-    <p>GYM SUPPLEMENTS | Información deportiva</p>
-</footer>
+        <p>
+            Información sobre suplementos y nutrición deportiva.
+        </p>
 
-<script src="script.js"></script>
+        <p class="copyright">
+            © 2026 GYM SUPPLEMENTS - Todos los derechos reservados.
+        </p>
+
+    </footer>
+
+
+    <!-- CONEXIÓN JAVASCRIPT -->
+    <script src="script.js"></script>
+
 </body>
+
 </html>
