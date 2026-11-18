@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #111;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background: #050505;
+    padding: 25px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+header h1 {
+    color: white;
+    font-size: 27px;
+}
+
+header span, .contenido span {
+    color: #ed101b;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: red;
+}
+
+main {
+    padding: 25px;
+}
+
+.slide {
+    min-height: 480px;
+    display: none;
+    align-items: center;
+    padding: 60px;
+    border-radius: 20px;
+    background: linear-gradient(90deg, #000, #333);
+    border: 1px solid #444;
+}
+
+.slide.activa {
+    display: flex;
+    animation: aparecer .5s;
+}
+
+.slide:nth-child(2) {
+    background: linear-gradient(90deg, #300000, #111);
+}
+
+.slide:nth-child(3) {
+    background: linear-gradient(90deg, #202020, #080808);
+}
+
+.contenido {
+    max-width: 550px;
+}
+
+.contenido h2 {
+    font-size: 55px;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.contenido p {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.boton {
+    display: inline-block;
+    background: #ed101b;
+    color: white;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+.boton:hover {
+    background: white;
+    color: red;
+}
+
+.controles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin: 20px;
+}
+
+.controles button {
+    background: red;
+    border: none;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+footer {
+    background: black;
+    text-align: center;
+    padding: 25px;
+    color: white;
+}
+
+@keyframes aparecer {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media(max-width: 700px) {
+    header {
+        justify-content: center;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    .slide {
+        padding: 30px;
+        min-height: 400px;
+    }
+
+    .contenido h2 {
+        font-size: 36px;
+    }
+}

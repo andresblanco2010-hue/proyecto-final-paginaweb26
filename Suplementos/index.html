@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Supplements</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+<header>
+    <h1>GYM <span>SUPPLEMENTS</span></h1>
+
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#productos">Productos</a>
+        <a href="#beneficios">Beneficios</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+</header>
+
+<main>
+
+    <!-- DIAPOSITIVA 1 -->
+    <section class="slide activa" id="inicio">
+        <div class="contenido">
+            <h2>PROTEÍNA <span>WHEY</span></h2>
+            <p>Conoce los suplementos deportivos y aprende sobre su uso responsable.</p>
+            <a href="#productos" class="boton">Ver productos</a>
+        </div>
+    </section>
+
+    <!-- DIAPOSITIVA 2 -->
+    <section class="slide" id="productos">
+        <div class="contenido">
+            <h2>CREATINA <span>MONOHIDRATO</span></h2>
+            <p>Conoce qué es la creatina, sus características y sus precauciones.</p>
+            <a href="#beneficios" class="boton">Conocer más</a>
+        </div>
+    </section>
+
+    <!-- DIAPOSITIVA 3 -->
+    <section class="slide" id="beneficios">
+        <div class="contenido">
+            <h2>INFORMACIÓN <span>DEPORTIVA</span></h2>
+            <p>Infórmate, entrena de forma responsable y cuida tu salud.</p>
+            <a href="#contacto" class="boton">Contactar</a>
+        </div>
+    </section>
+
+</main>
+
+<div class="controles">
+    <button onclick="cambiar(-1)">❮</button>
+    <span id="numero">1 / 3</span>
+    <button onclick="cambiar(1)">❯</button>
+</div>
+
+<footer id="contacto">
+    <p>GYM SUPPLEMENTS | Información deportiva</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
