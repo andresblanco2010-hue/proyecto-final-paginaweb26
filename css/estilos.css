@@ -1,3 +1,4 @@
+
 /* =====================================
    CONFIGURACIÓN GENERAL
 ===================================== */
@@ -20,7 +21,7 @@ body {
 
 
 /* =====================================
-   COLORES
+   COLORES PRINCIPALES
 ===================================== */
 
 :root {
@@ -56,8 +57,8 @@ header {
 }
 
 .logo img {
-    width: 45px;
-    height: 45px;
+    width: 50px;
+    height: 50px;
     object-fit: contain;
 }
 
@@ -86,8 +87,10 @@ nav {
 nav a {
     color: var(--blanco);
     text-decoration: none;
+
     font-size: 16px;
     font-weight: bold;
+
     transition: .3s;
 }
 
@@ -134,7 +137,7 @@ main {
 
 
 /* =====================================
-   IMÁGENES
+   IMÁGENES DE DIAPOSITIVAS
 ===================================== */
 
 #inicio {
@@ -150,7 +153,7 @@ main {
 }
 
 
-/* SOMBRA DE LAS IMÁGENES */
+/* SOMBRA */
 
 .slide::before {
     content: "";
@@ -166,7 +169,7 @@ main {
 
 
 /* =====================================
-   CONTENIDO DE DIAPOSITIVAS
+   TEXTO DE DIAPOSITIVAS
 ===================================== */
 
 .contenido {
@@ -226,6 +229,7 @@ main {
     color: white;
     text-decoration: none;
     display: block;
+    cursor: pointer;
 }
 
 .servicio:hover {
@@ -255,15 +259,14 @@ main {
 .apartado-nutricion {
     display: none;
 
-    padding: 40px 20px;
-    min-height: 600px;
-
     background: #111111;
-    text-align: center;
+    padding: 35px 5%;
+
+    color: white;
 }
 
 
-/* CUANDO NUTRICIÓN ESTÁ ABIERTA */
+/* MOSTRAR NUTRICIÓN */
 
 .modo-nutricion main,
 .modo-nutricion .servicios,
@@ -273,87 +276,249 @@ main {
 
 .modo-nutricion .apartado-nutricion {
     display: block;
+    animation: aparecer .5s ease;
 }
 
 
-/* CONTENIDO DE NUTRICIÓN */
+/* =====================================
+   PORTADA DE NUTRICIÓN
+===================================== */
 
-.nutricion-contenido {
-    max-width: 1100px;
-    margin: auto;
+.nutricion-portada {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    background: #080808;
+
+    border-radius: 18px;
+    padding: 30px;
+
+    border: 1px solid #333333;
 }
 
-.nutricion-contenido h2 {
-    font-size: 40px;
+.nutricion-texto {
+    flex: 1;
+}
+
+.nutricion-texto h2 {
+    font-size: 42px;
     margin-bottom: 20px;
-    color: white;
 }
 
-.nutricion-contenido h2 span {
+.nutricion-texto h2 span {
     color: var(--rojo);
 }
 
-.nutricion-contenido p {
-    font-size: 18px;
-    line-height: 1.6;
+.nutricion-texto p {
     color: #CCCCCC;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.nutricion-portada img {
+    width: 45%;
+    max-height: 430px;
+    object-fit: contain;
+}
+
+
+/* =====================================
+   INTRODUCCIÓN
+===================================== */
+
+.nutricion-introduccion {
+    text-align: center;
+
+    max-width: 850px;
+
+    margin: 65px auto;
+}
+
+.nutricion-introduccion h2 {
+    color: var(--rojo);
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.nutricion-introduccion p {
+    color: #CCCCCC;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+
+/* =====================================
+   TÍTULO DE NUTRIENTES
+===================================== */
+
+.nutricion-titulo {
+    text-align: center;
     margin-bottom: 30px;
 }
 
+.nutricion-titulo h2 {
+    font-size: 32px;
+    margin-bottom: 12px;
+}
 
-/* IMAGEN DE NUTRICIÓN */
+.nutricion-titulo h2 span {
+    color: var(--rojo);
+}
 
-.nutricion-contenido img {
-    width: 100%;
-    max-width: 650px;
-    height: auto;
-
-    display: block;
-    margin: 20px auto;
-
-    border-radius: 15px;
+.nutricion-titulo p {
+    color: #BBBBBB;
 }
 
 
-/* INFORMACIÓN EXTRA */
+/* =====================================
+   TARJETAS DE NUTRIENTES
+===================================== */
 
-.informacion-extra {
+.nutricion-tarjetas {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.nutricion-card {
     background: #080808;
 
     border: 1px solid #333333;
-    border-left: 4px solid var(--rojo);
+    border-radius: 15px;
 
-    border-radius: 12px;
+    padding: 25px 15px;
 
-    max-width: 650px;
+    text-align: center;
 
-    padding: 25px;
-    margin: 25px auto;
+    transition: .3s;
 }
 
-.informacion-extra h3 {
+.nutricion-card:hover {
+    border-color: var(--rojo);
+    transform: translateY(-5px);
+}
+
+.nutricion-card span {
+    font-size: 45px;
+}
+
+.nutricion-card h3 {
     color: var(--rojo);
-    margin-bottom: 15px;
+    margin: 18px 0;
+    font-size: 17px;
 }
 
-.informacion-extra p {
-    margin-bottom: 0;
+.nutricion-card p {
+    color: #CCCCCC;
+    line-height: 1.6;
+    font-size: 14px;
 }
 
 
-/* BOTÓN VOLVER */
+/* =====================================
+   SUPLEMENTOS DEPORTIVOS
+===================================== */
+
+.nutricion-suplementos {
+    background: #080808;
+
+    border-radius: 18px;
+    border: 1px solid #333333;
+
+    padding: 35px;
+    margin-top: 65px;
+
+    text-align: center;
+}
+
+.nutricion-suplementos h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.nutricion-suplementos h2 span {
+    color: var(--rojo);
+}
+
+.nutricion-suplementos > p {
+    color: #CCCCCC;
+    line-height: 1.7;
+
+    max-width: 750px;
+    margin: 0 auto 25px;
+}
+
+
+/* IMÁGENES DE PRODUCTOS */
+
+.suplemento-imagenes {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+
+    margin: 30px auto;
+    max-width: 750px;
+}
+
+.suplemento-imagenes div {
+    background: #151515;
+
+    border-radius: 15px;
+    padding: 15px;
+}
+
+.suplemento-imagenes img {
+    width: 100%;
+    height: 220px;
+
+    object-fit: contain;
+}
+
+.suplemento-imagenes h3 {
+    color: var(--rojo);
+    margin-top: 15px;
+}
+
+.suplemento-imagenes p {
+    color: #CCCCCC;
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+.nutricion-suplementos .advertencia {
+    color: #FF7777;
+    font-size: 14px;
+    margin-top: 25px;
+}
+
+
+/* =====================================
+   BOTÓN REGRESAR
+===================================== */
+
+.nutricion-regresar {
+    text-align: center;
+    margin: 45px 0 20px;
+}
 
 #volverInicio {
     background: var(--rojo);
     color: white;
 
     border: none;
-    padding: 15px 30px;
-
     border-radius: 30px;
 
-    font-size: 16px;
+    padding: 15px 30px;
+
     font-weight: bold;
+    font-size: 16px;
 
     cursor: pointer;
     transition: .3s;
@@ -403,6 +568,7 @@ footer p {
 ===================================== */
 
 @keyframes aparecer {
+
     from {
         opacity: 0;
         transform: translateY(15px);
@@ -412,11 +578,34 @@ footer p {
         opacity: 1;
         transform: translateY(0);
     }
+
 }
 
 
 /* =====================================
    DISEÑO RESPONSIVE
+===================================== */
+
+@media (max-width: 850px) {
+
+    .nutricion-portada {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nutricion-portada img {
+        width: 85%;
+    }
+
+    .nutricion-tarjetas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =====================================
+   CELULARES
 ===================================== */
 
 @media (max-width: 750px) {
@@ -458,18 +647,38 @@ footer p {
         margin: 12px;
     }
 
-    .nutricion-contenido h2 {
-        font-size: 28px;
-    }
-
-    .nutricion-contenido p {
-        font-size: 16px;
+    .nutricion-texto h2 {
+        font-size: 30px;
     }
 
 }
 
 
 /* CELULARES PEQUEÑOS */
+
+@media (max-width: 500px) {
+
+    .apartado-nutricion {
+        padding: 20px 12px;
+    }
+
+    .nutricion-tarjetas {
+        grid-template-columns: 1fr;
+    }
+
+    .suplemento-imagenes {
+        grid-template-columns: 1fr;
+    }
+
+    .nutricion-suplementos {
+        padding: 20px;
+    }
+
+    .nutricion-texto p {
+        font-size: 16px;
+    }
+
+}
 
 @media (max-width: 400px) {
 

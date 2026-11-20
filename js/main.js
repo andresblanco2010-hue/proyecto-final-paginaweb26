@@ -1,3 +1,4 @@
+
 // =====================================
 // SELECCIONAR ELEMENTOS
 // =====================================
@@ -12,7 +13,7 @@ const volverInicio = document.getElementById("volverInicio");
 
 
 // =====================================
-// MOSTRAR DIAPOSITIVAS
+// FUNCIÓN PARA MOSTRAR DIAPOSITIVAS
 // =====================================
 
 function mostrar(numero) {
@@ -23,19 +24,21 @@ function mostrar(numero) {
         slide.classList.remove("activa");
     });
 
-    // QUITAR COLOR ACTIVO DEL MENÚ
+    // QUITAR ESTADO ACTIVO DEL MENÚ
 
     enlaces.forEach(enlace => {
         enlace.classList.remove("activo");
     });
 
-    // MOSTRAR LA DIAPOSITIVA ELEGIDA
+    // MOSTRAR LA DIAPOSITIVA SELECCIONADA
 
-    diapositivas[numero].classList.add("activa");
+    if (diapositivas[numero]) {
 
-    // ACTIVAR EL ENLACE DEL MENÚ
+        diapositivas[numero].classList.add("activa");
 
-    enlaces[numero].classList.add("activo");
+        enlaces[numero].classList.add("activo");
+
+    }
 
 }
 
@@ -50,11 +53,11 @@ enlaces.forEach(enlace => {
 
         event.preventDefault();
 
-        // CERRAR NUTRICIÓN
+        // CERRAR EL APARTADO DE NUTRICIÓN
 
         document.body.classList.remove("modo-nutricion");
 
-        // OBTENER DIAPOSITIVA
+        // OBTENER EL NÚMERO DE DIAPOSITIVA
 
         const numero = Number(this.dataset.slide);
 
@@ -62,7 +65,7 @@ enlaces.forEach(enlace => {
 
         mostrar(numero);
 
-        // SUBIR AL INICIO
+        // SUBIR AL PRINCIPIO
 
         window.scrollTo({
             top: 0,
@@ -75,14 +78,18 @@ enlaces.forEach(enlace => {
 
 
 // =====================================
-// ABRIR NUTRICIÓN
+// ABRIR APARTADO DE NUTRICIÓN
 // =====================================
 
 abrirNutricion.addEventListener("click", function(event) {
 
     event.preventDefault();
 
+    // MOSTRAR NUTRICIÓN
+
     document.body.classList.add("modo-nutricion");
+
+    // SUBIR AL PRINCIPIO
 
     window.scrollTo({
         top: 0,
@@ -98,9 +105,15 @@ abrirNutricion.addEventListener("click", function(event) {
 
 volverInicio.addEventListener("click", function() {
 
+    // CERRAR NUTRICIÓN
+
     document.body.classList.remove("modo-nutricion");
 
+    // MOSTRAR PRIMERA DIAPOSITIVA
+
     mostrar(0);
+
+    // SUBIR AL PRINCIPIO
 
     window.scrollTo({
         top: 0,
