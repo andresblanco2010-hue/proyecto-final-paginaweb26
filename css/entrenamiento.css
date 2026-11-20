@@ -1,0 +1,205 @@
+
+/* =====================================
+   APARTADO DE ENTRENAMIENTO
+===================================== */
+
+.apartado-entrenamiento {
+    display: none;
+    background: #111;
+    color: white;
+    padding: 30px;
+    font-family: Arial, sans-serif;
+}
+
+
+/* PORTADA */
+
+.entrenamiento-portada {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.entrenamiento-portada img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.entrenamiento-texto {
+    position: absolute;
+    left: 40px;
+    bottom: 35px;
+    z-index: 2;
+}
+
+.entrenamiento-texto h2 {
+    font-size: 55px;
+    font-weight: 900;
+    color: white;
+    margin: 0;
+}
+
+.entrenamiento-texto h2 span {
+    color: #ff3030;
+}
+
+.entrenamiento-texto p {
+    font-size: 18px;
+    color: white;
+}
+
+
+/* TITULO */
+
+.entrenamiento-titulo {
+    text-align: center;
+    margin: 45px 0 30px;
+}
+
+.entrenamiento-titulo h2 {
+    font-size: 32px;
+    color: white;
+}
+
+.entrenamiento-titulo h2 span {
+    color: #ff3030;
+}
+
+.entrenamiento-titulo p {
+    color: #bbb;
+}
+
+
+/* TARJETAS */
+
+.entrenamiento-tarjetas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 20px;
+}
+
+.musculo-card {
+    position: relative;
+    height: 340px;
+    border-radius: 15px;
+    overflow: hidden;
+    text-decoration: none;
+    color: white;
+    background: #222;
+    border: 1px solid #333;
+    transition: 0.3s;
+}
+
+.musculo-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.musculo-card:hover img {
+    transform: scale(1.08);
+}
+
+.musculo-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.95),
+        rgba(0, 0, 0, 0.05)
+    );
+}
+
+.musculo-card:hover {
+    border-color: #ff3030;
+    transform: translateY(-5px);
+}
+
+
+/* TEXTO */
+
+.musculo-texto {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    z-index: 2;
+}
+
+.musculo-texto span {
+    color: #ff3030;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.musculo-texto h3 {
+    color: white;
+    font-size: 28px;
+    margin: 10px 0;
+}
+
+.musculo-texto p {
+    color: #ddd;
+}
+
+
+/* BOTON REGRESAR */
+
+.entrenamiento-regresar {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.entrenamiento-regresar button {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    background: #ff3030;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.entrenamiento-regresar button:hover {
+    background: #cc0000;
+    transform: scale(1.05);
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 600px) {
+
+    .apartado-entrenamiento {
+        padding: 15px;
+    }
+
+    .entrenamiento-portada {
+        height: 300px;
+    }
+
+    .entrenamiento-texto {
+        left: 20px;
+        bottom: 20px;
+    }
+
+    .entrenamiento-texto h2 {
+        font-size: 35px;
+    }
+
+    .entrenamiento-titulo h2 {
+        font-size: 25px;
+    }
+
+    .musculo-card {
+        height: 300px;
+    }
+
+}
