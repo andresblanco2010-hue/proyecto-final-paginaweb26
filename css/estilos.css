@@ -1,6 +1,6 @@
-/* =================================
+/* =====================================
    CONFIGURACIÓN GENERAL
-================================= */
+===================================== */
 
 * {
     margin: 0;
@@ -19,9 +19,9 @@ body {
 }
 
 
-/* =================================
-   COLORES PRINCIPALES
-================================= */
+/* =====================================
+   COLORES
+===================================== */
 
 :root {
     --rojo: #ED101B;
@@ -31,13 +31,13 @@ body {
 }
 
 
-/* =================================
+/* =====================================
    ENCABEZADO
-================================= */
+===================================== */
 
 header {
     background: var(--negro);
-    padding: 25px 6%;
+    padding: 20px 6%;
 
     display: flex;
     justify-content: space-between;
@@ -49,8 +49,20 @@ header {
     border-bottom: 2px solid var(--rojo);
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+}
+
 .logo h1 {
-    font-size: 30px;
+    font-size: 28px;
     font-weight: 900;
     font-style: italic;
 }
@@ -60,12 +72,13 @@ header {
 }
 
 
-/* =================================
+/* =====================================
    MENÚ DE NAVEGACIÓN
-================================= */
+===================================== */
 
 nav {
     display: flex;
+    align-items: center;
     gap: 25px;
     flex-wrap: wrap;
 }
@@ -73,10 +86,8 @@ nav {
 nav a {
     color: var(--blanco);
     text-decoration: none;
-
     font-size: 16px;
     font-weight: bold;
-
     transition: .3s;
 }
 
@@ -86,9 +97,9 @@ nav a.activo {
 }
 
 
-/* =================================
+/* =====================================
    DIAPOSITIVAS
-================================= */
+===================================== */
 
 main {
     padding: 25px;
@@ -107,10 +118,10 @@ main {
     background-repeat: no-repeat;
 
     border-radius: 18px;
-    overflow: hidden;
-
-    position: relative;
     border: 1px solid #444444;
+
+    overflow: hidden;
+    position: relative;
 }
 
 
@@ -122,42 +133,41 @@ main {
 }
 
 
-/* =================================
-   IMÁGENES DE LAS DIAPOSITIVAS
-================================= */
+/* =====================================
+   IMÁGENES
+===================================== */
 
-.slide:nth-child(1) {
-    background-image: url("imagenes/proteina_whey.png");
+#inicio {
+    background-image: url("../img/proteina_whey.png");
 }
 
-.slide:nth-child(2) {
-    background-image: url("imagenes/creatina.png");
+#productos {
+    background-image: url("../img/creatina.png");
 }
 
-.slide:nth-child(3) {
-    background-image: url("imagenes/informacion_deportiva.png");
+#informacion {
+    background-image: url("../img/informacion_deportiva.png");
 }
 
 
-/* SOMBRA SOBRE LAS IMÁGENES */
+/* SOMBRA DE LAS IMÁGENES */
 
 .slide::before {
     content: "";
-
     position: absolute;
     inset: 0;
 
     background: linear-gradient(
         90deg,
-        rgba(0,0,0,.65),
-        rgba(0,0,0,.05)
+        rgba(0,0,0,.75),
+        rgba(0,0,0,.10)
     );
 }
 
 
-/* =================================
-   TEXTO DE LAS DIAPOSITIVAS
-================================= */
+/* =====================================
+   CONTENIDO DE DIAPOSITIVAS
+===================================== */
 
 .contenido {
     position: relative;
@@ -165,7 +175,7 @@ main {
 
     max-width: 450px;
 
-    background: rgba(0,0,0,.65);
+    background: rgba(0,0,0,.70);
 
     padding: 25px;
 
@@ -176,7 +186,6 @@ main {
 .contenido h2 {
     font-size: 42px;
     font-weight: 900;
-
     margin-bottom: 18px;
 }
 
@@ -190,13 +199,12 @@ main {
 }
 
 
-/* =================================
-   SERVICIOS
-================================= */
+/* =====================================
+   TARJETAS DE SERVICIOS
+===================================== */
 
 .servicios {
     display: grid;
-
     grid-template-columns: repeat(4, 1fr);
 
     gap: 15px;
@@ -218,7 +226,6 @@ main {
     color: white;
     text-decoration: none;
     display: block;
-    cursor: pointer;
 }
 
 .servicio:hover {
@@ -241,11 +248,9 @@ main {
 }
 
 
-/* =================================
+/* =====================================
    APARTADO DE NUTRICIÓN
-================================= */
-
-/* OCULTO POR DEFECTO */
+===================================== */
 
 .apartado-nutricion {
     display: none;
@@ -258,7 +263,7 @@ main {
 }
 
 
-/* CUANDO SE ABRE NUTRICIÓN */
+/* CUANDO NUTRICIÓN ESTÁ ABIERTA */
 
 .modo-nutricion main,
 .modo-nutricion .servicios,
@@ -291,9 +296,7 @@ main {
 .nutricion-contenido p {
     font-size: 18px;
     line-height: 1.6;
-
     color: #CCCCCC;
-
     margin-bottom: 30px;
 }
 
@@ -303,7 +306,6 @@ main {
 .nutricion-contenido img {
     width: 100%;
     max-width: 650px;
-
     height: auto;
 
     display: block;
@@ -346,7 +348,6 @@ main {
     color: white;
 
     border: none;
-
     padding: 15px 30px;
 
     border-radius: 30px;
@@ -355,7 +356,6 @@ main {
     font-weight: bold;
 
     cursor: pointer;
-
     transition: .3s;
 }
 
@@ -366,9 +366,9 @@ main {
 }
 
 
-/* =================================
+/* =====================================
    PIE DE PÁGINA
-================================= */
+===================================== */
 
 footer {
     background: var(--negro);
@@ -398,12 +398,11 @@ footer p {
 }
 
 
-/* =================================
+/* =====================================
    ANIMACIONES
-================================= */
+===================================== */
 
 @keyframes aparecer {
-
     from {
         opacity: 0;
         transform: translateY(15px);
@@ -413,19 +412,22 @@ footer p {
         opacity: 1;
         transform: translateY(0);
     }
-
 }
 
 
-/* =================================
-   DISEÑO PARA CELULARES
-================================= */
+/* =====================================
+   DISEÑO RESPONSIVE
+===================================== */
 
 @media (max-width: 750px) {
 
     header {
         justify-content: center;
         text-align: center;
+    }
+
+    .logo {
+        justify-content: center;
     }
 
     nav {
@@ -473,6 +475,10 @@ footer p {
 
     .servicios {
         grid-template-columns: 1fr;
+    }
+
+    .logo h1 {
+        font-size: 22px;
     }
 
 }

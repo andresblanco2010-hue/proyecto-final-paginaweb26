@@ -1,0 +1,30 @@
+{
+    "nombre": "GYM SUPPLEMENTS",
+    "descripcion": "Información sobre suplementos y nutrición deportiva",
+    "colores": {
+        "principal": "#050505",
+        "secundario": "#ED101B",
+        "terciario": "#FFFFFF",
+        "fondo": "#333333"
+    },
+    "diapositivas": [
+        {
+            "nombre": "Inicio",
+            "imagen": "img/proteina_whey.png"
+        },
+        {
+            "nombre": "Productos",
+            "imagen": "img/creatina.png"
+        },
+        {
+            "nombre": "Información",
+            "imagen": "img/informacion_deportiva.png"
+        }
+    ],
+    "servicios": [
+        "Entrenamiento",
+        "Nutrición",
+        "Salud",
+        "Deporte"
+    ]
+}

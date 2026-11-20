@@ -1,7 +1,6 @@
-
-// =================================
+// =====================================
 // SELECCIONAR ELEMENTOS
-// =================================
+// =====================================
 
 const diapositivas = document.querySelectorAll(".slide");
 
@@ -11,12 +10,10 @@ const abrirNutricion = document.getElementById("abrirNutricion");
 
 const volverInicio = document.getElementById("volverInicio");
 
-const navContacto = document.getElementById("navContacto");
 
-
-// =================================
+// =====================================
 // MOSTRAR DIAPOSITIVAS
-// =================================
+// =====================================
 
 function mostrar(numero) {
 
@@ -32,20 +29,20 @@ function mostrar(numero) {
         enlace.classList.remove("activo");
     });
 
-    // MOSTRAR LA DIAPOSITIVA SELECCIONADA
+    // MOSTRAR LA DIAPOSITIVA ELEGIDA
 
     diapositivas[numero].classList.add("activa");
 
-    // ACTIVAR EL ENLACE SELECCIONADO
+    // ACTIVAR EL ENLACE DEL MENÚ
 
     enlaces[numero].classList.add("activo");
 
 }
 
 
-// =================================
-// MENÚ PRINCIPAL
-// =================================
+// =====================================
+// FUNCIONAMIENTO DEL MENÚ
+// =====================================
 
 enlaces.forEach(enlace => {
 
@@ -57,7 +54,7 @@ enlaces.forEach(enlace => {
 
         document.body.classList.remove("modo-nutricion");
 
-        // OBTENER NÚMERO DE DIAPOSITIVA
+        // OBTENER DIAPOSITIVA
 
         const numero = Number(this.dataset.slide);
 
@@ -77,9 +74,9 @@ enlaces.forEach(enlace => {
 });
 
 
-// =================================
-// ABRIR APARTADO DE NUTRICIÓN
-// =================================
+// =====================================
+// ABRIR NUTRICIÓN
+// =====================================
 
 abrirNutricion.addEventListener("click", function(event) {
 
@@ -95,40 +92,19 @@ abrirNutricion.addEventListener("click", function(event) {
 });
 
 
-// =================================
+// =====================================
 // VOLVER AL INICIO
-// =================================
+// =====================================
 
 volverInicio.addEventListener("click", function() {
 
-    // CERRAR APARTADO DE NUTRICIÓN
-
     document.body.classList.remove("modo-nutricion");
 
-    // MOSTRAR PRIMERA DIAPOSITIVA
-
     mostrar(0);
-
-    // SUBIR AL INICIO
 
     window.scrollTo({
         top: 0,
         behavior: "smooth"
     });
-
-});
-
-
-// =================================
-// BOTÓN CONTACTO
-// =================================
-
-navContacto.addEventListener("click", function() {
-
-    // CERRAR NUTRICIÓN
-
-    document.body.classList.remove("modo-nutricion");
-
-    // PERMITIR QUE APAREZCA EL PIE DE PÁGINA
 
 });
