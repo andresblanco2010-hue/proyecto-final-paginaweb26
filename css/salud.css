@@ -1,0 +1,389 @@
+
+:root {
+    --rojo: #ED101B;
+    --negro: #050505;
+    --blanco: #FFFFFF;
+    --gris: #333333;
+    --fondo: #111111;
+    --texto-secundario: #CCCCCC;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--fondo);
+    color: var(--blanco);
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* ENCABEZADO */
+
+.encabezado {
+    background: var(--negro);
+    padding: 20px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 18px;
+    border-bottom: 2px solid var(--rojo);
+}
+
+.marca {
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 900;
+    font-style: italic;
+}
+
+.marca span,
+footer span {
+    color: var(--rojo);
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+}
+
+nav a {
+    color: var(--blanco);
+    text-decoration: none;
+    font-weight: bold;
+    transition: .3s;
+}
+
+nav a:hover,
+nav a.activo {
+    color: var(--rojo);
+}
+
+/* CONTENIDO PRINCIPAL */
+
+main {
+    width: min(1200px, 92%);
+    margin: auto;
+}
+
+/* PORTADA */
+
+.portada {
+    margin-top: 28px;
+    min-height: 390px;
+    padding: 40px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+    background: linear-gradient(115deg, #080808 55%, #211010);
+    border: 1px solid var(--gris);
+    border-radius: 18px;
+}
+
+.portada-texto {
+    flex: 1;
+    max-width: 650px;
+}
+
+.etiqueta {
+    color: var(--rojo);
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+.portada h1 {
+    font-size: clamp(36px, 5vw, 58px);
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+h1 span,
+h2 span {
+    color: var(--rojo);
+}
+
+.portada-texto > p:not(.etiqueta) {
+    color: var(--texto-secundario);
+    font-size: 18px;
+    margin-bottom: 28px;
+}
+
+.portada-icono {
+    width: 280px;
+    height: 240px;
+    display: grid;
+    place-items: center;
+    font-size: 120px;
+    background: radial-gradient(circle, #421014, #100909 68%);
+    border: 1px solid #542025;
+    border-radius: 25px;
+}
+
+/* BOTONES */
+
+.boton {
+    display: inline-block;
+    background: var(--rojo);
+    color: var(--blanco);
+    text-decoration: none;
+    padding: 13px 24px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.boton:hover {
+    background: var(--blanco);
+    color: var(--rojo);
+    transform: translateY(-2px);
+}
+
+/* SECCIONES */
+
+.seccion {
+    padding: 65px 0 10px;
+}
+
+.introduccion {
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
+}
+
+.introduccion h2,
+.titulo-seccion h2 {
+    font-size: clamp(26px, 4vw, 34px);
+    margin-bottom: 14px;
+}
+
+.introduccion > p:last-child,
+.titulo-seccion > p:last-child {
+    color: var(--texto-secundario);
+    font-size: 17px;
+}
+
+.titulo-seccion {
+    text-align: center;
+    max-width: 850px;
+    margin: 0 auto 30px;
+}
+
+/* TARJETAS */
+
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.tarjeta {
+    background: #080808;
+    border: 1px solid var(--gris);
+    border-radius: 15px;
+    padding: 26px 20px;
+    text-align: center;
+    transition: .3s;
+}
+
+.tarjeta:hover {
+    border-color: var(--rojo);
+    transform: translateY(-5px);
+}
+
+.icono {
+    font-size: 42px;
+}
+
+.tarjeta h3 {
+    color: var(--rojo);
+    margin: 13px 0;
+    font-size: 18px;
+}
+
+.tarjeta p,
+.dimensiones p {
+    color: var(--texto-secundario);
+    font-size: 15px;
+}
+
+/* DIMENSIONES DE LA SALUD */
+
+.dimensiones {
+    max-width: 900px;
+    margin: auto;
+    display: grid;
+    gap: 14px;
+}
+
+.dimensiones article {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding: 20px 24px;
+    background: #080808;
+    border: 1px solid var(--gris);
+    border-radius: 12px;
+}
+
+.dimensiones article > span {
+    color: var(--rojo);
+    font-size: 28px;
+    font-weight: 900;
+}
+
+.dimensiones h3 {
+    margin-bottom: 4px;
+}
+
+/* AVISO */
+
+.aviso-salud {
+    margin-top: 60px;
+    padding: 32px;
+    text-align: center;
+    background: #19090a;
+    border: 1px solid var(--rojo);
+    border-radius: 16px;
+}
+
+.aviso-salud h2 {
+    font-size: clamp(22px, 3vw, 30px);
+    margin-bottom: 12px;
+}
+
+.aviso-salud p {
+    color: var(--texto-secundario);
+    max-width: 850px;
+    margin: auto;
+}
+
+/* REGRESAR */
+
+.regresar {
+    text-align: center;
+    padding: 45px 0;
+}
+
+/* PIE DE PÁGINA */
+
+footer {
+    background: var(--negro);
+    text-align: center;
+    padding: 32px 15px;
+    border-top: 2px solid var(--rojo);
+}
+
+footer h2 {
+    margin-bottom: 10px;
+}
+
+footer p {
+    color: var(--texto-secundario);
+    margin: 7px;
+}
+
+.copyright {
+    font-size: 13px;
+    margin-top: 18px;
+}
+
+/* ANIMACIONES */
+
+.revelar {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity .6s ease, transform .6s ease;
+}
+
+.revelar.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* TABLETS */
+
+@media (max-width: 800px) {
+
+    .encabezado {
+        justify-content: center;
+        text-align: center;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 14px;
+    }
+
+    .portada {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .portada-icono {
+        width: 220px;
+        height: 180px;
+        font-size: 90px;
+    }
+
+    .tarjetas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* CELULARES */
+
+@media (max-width: 520px) {
+
+    main {
+        width: 92%;
+    }
+
+    .portada {
+        padding: 28px 18px;
+    }
+
+    .portada-texto > p:not(.etiqueta) {
+        font-size: 16px;
+    }
+
+    .tarjetas {
+        grid-template-columns: 1fr;
+    }
+
+    .dimensiones article {
+        padding: 16px;
+    }
+
+    .aviso-salud {
+        padding: 24px 16px;
+    }
+}
+
+/* ACCESIBILIDAD */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    .revelar,
+    .revelar.visible {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
