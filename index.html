@@ -8,7 +8,9 @@
 
     <title>GYM SUPPLEMENTS</title>
 
+    <!-- ESTILOS PRINCIPALES -->
     <link rel="stylesheet" href="css/estilos.css">
+
 </head>
 
 <body>
@@ -28,7 +30,7 @@
             <a href="#" class="nav-link activo" data-slide="0">Inicio</a>
             <a href="#" class="nav-link" data-slide="1">Productos</a>
             <a href="#" class="nav-link" data-slide="2">Información</a>
-            <a href="page/contactame.html">Contacto</a>
+            <a href="page/contactame.html" data-ruta="contacto">Contacto</a>
         </nav>
 
     </header>
@@ -102,8 +104,6 @@
 
     <section id="apartadoNutricion" class="apartado-nutricion">
 
-        <!-- PORTADA -->
-
         <div class="nutricion-portada">
 
             <div class="nutricion-texto">
@@ -123,8 +123,6 @@
         </div>
 
 
-        <!-- INTRODUCCIÓN -->
-
         <div class="nutricion-introduccion">
 
             <h2>¿QUÉ ES LA NUTRICIÓN?</h2>
@@ -139,8 +137,6 @@
 
         </div>
 
-
-        <!-- TIPOS DE NUTRIENTES -->
 
         <div class="nutricion-titulo">
 
@@ -162,8 +158,7 @@
                 <h3>PROTEÍNAS</h3>
 
                 <p>
-                    Ayudan al crecimiento y mantenimiento
-                    de los tejidos del cuerpo.
+                    Ayudan al crecimiento y mantenimiento de los tejidos del cuerpo.
                 </p>
 
             </div>
@@ -176,8 +171,7 @@
                 <h3>CARBOHIDRATOS</h3>
 
                 <p>
-                    Son una fuente importante de energía
-                    para realizar nuestras actividades.
+                    Son una fuente importante de energía para realizar nuestras actividades.
                 </p>
 
             </div>
@@ -190,8 +184,7 @@
                 <h3>GRASAS SALUDABLES</h3>
 
                 <p>
-                    Participan en diferentes funciones
-                    importantes del organismo.
+                    Participan en diferentes funciones importantes del organismo.
                 </p>
 
             </div>
@@ -204,8 +197,7 @@
                 <h3>VITAMINAS Y MINERALES</h3>
 
                 <p>
-                    Contribuyen al funcionamiento adecuado
-                    del organismo.
+                    Contribuyen al funcionamiento adecuado del organismo.
                 </p>
 
             </div>
@@ -213,7 +205,7 @@
         </div>
 
 
-        <!-- SUPLEMENTOS DEPORTIVOS -->
+        <!-- SUPLEMENTOS -->
 
         <div class="nutricion-suplementos">
 
@@ -248,8 +240,7 @@
                     <h3>CREATINA</h3>
 
                     <p>
-                        Compuesto que participa en la producción
-                        de energía muscular.
+                        Compuesto que participa en la producción de energía muscular.
                     </p>
 
                 </div>
@@ -258,10 +249,8 @@
 
 
             <p class="advertencia">
-
                 Antes de utilizar suplementos, es importante
                 consultar con un profesional de salud.
-
             </p>
 
         </div>
@@ -289,60 +278,60 @@
 
         <!-- ENTRENAMIENTO -->
 
-        <a href="page/entrenamiento.html" class="servicio">
+        <a href="page/entrenamiento.html"
+           class="servicio"
+           data-ruta="entrenamiento">
 
             <span>🏋️</span>
 
             <h3>Entrenamiento</h3>
 
-            <p>
-                Actividad física responsable
-            </p>
+            <p>Actividad física responsable</p>
 
         </a>
 
 
         <!-- NUTRICIÓN -->
 
-        <a href="#" class="servicio" id="abrirNutricion">
+        <a href="#"
+           class="servicio"
+           id="abrirNutricion">
 
             <span>🥗</span>
 
             <h3>Nutrición</h3>
 
-            <p>
-                Alimentación equilibrada
-            </p>
+            <p>Alimentación equilibrada</p>
 
         </a>
 
 
         <!-- SALUD -->
 
-        <a href="page/salud.html" class="servicio">
+        <a href="page/salud.html"
+           class="servicio"
+           data-ruta="salud">
 
             <span>❤️</span>
 
             <h3>Salud</h3>
 
-            <p>
-                Cuidado y bienestar
-            </p>
+            <p>Cuidado y bienestar</p>
 
         </a>
 
 
         <!-- DEPORTE -->
 
-        <a href="page/deporte.html" class="servicio">
+        <a href="page/deporte.html"
+           class="servicio"
+           data-ruta="deporte">
 
             <span>💪</span>
 
             <h3>Deporte</h3>
 
-            <p>
-                Hábitos saludables
-            </p>
+            <p>Hábitos saludables</p>
 
         </a>
 
@@ -372,6 +361,8 @@
     <!-- =====================================
          JAVASCRIPT
     ====================================== -->
+
+    <script src="js/rutas.js"></script>
 
     <script src="js/main.js"></script>
 
