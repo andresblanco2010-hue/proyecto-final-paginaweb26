@@ -27,10 +27,21 @@
         </div>
 
         <nav>
-            <a href="#" class="nav-link activo" data-slide="0">Inicio</a>
-            <a href="#" class="nav-link" data-slide="1">Productos</a>
-            <a href="#" class="nav-link" data-slide="2">Información</a>
-            <a href="page/contactame.html" data-ruta="contacto">Contacto</a>
+            <a href="inicio"
+               class="nav-link activo"
+               data-slide="0"
+               data-ruta="inicio">Inicio</a>
+
+            <a href="#"
+               class="nav-link"
+               data-slide="1">Productos</a>
+
+            <a href="#"
+               class="nav-link"
+               data-slide="2">Información</a>
+
+            <a href="contacto"
+               data-ruta="contacto">Contacto</a>
         </nav>
 
     </header>
@@ -99,177 +110,6 @@
 
 
     <!-- =====================================
-         APARTADO DE NUTRICIÓN
-    ====================================== -->
-
-    <section id="apartadoNutricion" class="apartado-nutricion">
-
-        <div class="nutricion-portada">
-
-            <div class="nutricion-texto">
-
-                <h2>NUTRICIÓN <span>DEPORTIVA</span></h2>
-
-                <p>
-                    Descubre la importancia de una alimentación
-                    equilibrada para cuidar tu salud y acompañar
-                    tu actividad física.
-                </p>
-
-            </div>
-
-            <img src="img/nutricion.png" alt="Nutrición deportiva">
-
-        </div>
-
-
-        <div class="nutricion-introduccion">
-
-            <h2>¿QUÉ ES LA NUTRICIÓN?</h2>
-
-            <p>
-                La nutrición es el proceso mediante el cual
-                nuestro organismo obtiene y utiliza los nutrientes
-                necesarios para funcionar correctamente.
-                Una alimentación variada ayuda a mantener
-                el bienestar y la salud.
-            </p>
-
-        </div>
-
-
-        <div class="nutricion-titulo">
-
-            <h2>TIPOS DE <span>NUTRIENTES</span></h2>
-
-            <p>
-                Conoce algunos nutrientes importantes para el organismo.
-            </p>
-
-        </div>
-
-
-        <div class="nutricion-tarjetas">
-
-            <div class="nutricion-card">
-
-                <span>🍗</span>
-
-                <h3>PROTEÍNAS</h3>
-
-                <p>
-                    Ayudan al crecimiento y mantenimiento de los tejidos del cuerpo.
-                </p>
-
-            </div>
-
-
-            <div class="nutricion-card">
-
-                <span>🍚</span>
-
-                <h3>CARBOHIDRATOS</h3>
-
-                <p>
-                    Son una fuente importante de energía para realizar nuestras actividades.
-                </p>
-
-            </div>
-
-
-            <div class="nutricion-card">
-
-                <span>🥑</span>
-
-                <h3>GRASAS SALUDABLES</h3>
-
-                <p>
-                    Participan en diferentes funciones importantes del organismo.
-                </p>
-
-            </div>
-
-
-            <div class="nutricion-card">
-
-                <span>🥦</span>
-
-                <h3>VITAMINAS Y MINERALES</h3>
-
-                <p>
-                    Contribuyen al funcionamiento adecuado del organismo.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <!-- SUPLEMENTOS -->
-
-        <div class="nutricion-suplementos">
-
-            <h2>SUPLEMENTOS <span>DEPORTIVOS</span></h2>
-
-            <p>
-                Los suplementos deportivos son productos que pueden
-                complementar la alimentación. No reemplazan una
-                dieta variada ni son necesarios para todas las personas.
-            </p>
-
-
-            <div class="suplemento-imagenes">
-
-                <div>
-
-                    <img src="img/proteina_whey.png" alt="Proteína Whey">
-
-                    <h3>PROTEÍNA WHEY</h3>
-
-                    <p>
-                        Producto elaborado a partir del suero de leche.
-                    </p>
-
-                </div>
-
-
-                <div>
-
-                    <img src="img/creatina.png" alt="Creatina">
-
-                    <h3>CREATINA</h3>
-
-                    <p>
-                        Compuesto que participa en la producción de energía muscular.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <p class="advertencia">
-                Antes de utilizar suplementos, es importante
-                consultar con un profesional de salud.
-            </p>
-
-        </div>
-
-
-        <!-- VOLVER AL INICIO -->
-
-        <div class="nutricion-regresar">
-
-            <button id="volverInicio">
-                ← VOLVER AL INICIO
-            </button>
-
-        </div>
-
-    </section>
-
-
-    <!-- =====================================
          SERVICIOS
     ====================================== -->
 
@@ -278,7 +118,7 @@
 
         <!-- ENTRENAMIENTO -->
 
-        <a href="page/entrenamiento.html"
+        <a href="entrenamiento"
            class="servicio"
            data-ruta="entrenamiento">
 
@@ -293,9 +133,9 @@
 
         <!-- NUTRICIÓN -->
 
-        <a href="#"
+        <a href="nutricion"
            class="servicio"
-           id="abrirNutricion">
+           data-ruta="nutricion">
 
             <span>🥗</span>
 
@@ -308,7 +148,7 @@
 
         <!-- SALUD -->
 
-        <a href="page/salud.html"
+        <a href="salud"
            class="servicio"
            data-ruta="salud">
 
@@ -323,7 +163,7 @@
 
         <!-- DEPORTE -->
 
-        <a href="page/deporte.html"
+        <a href="deporte"
            class="servicio"
            data-ruta="deporte">
 

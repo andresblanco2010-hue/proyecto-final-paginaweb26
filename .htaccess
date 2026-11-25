@@ -1,55 +1,38 @@
 
 # =====================================
 # GYM SUPPLEMENTS
-# CONFIGURACION APACHE
+# CONFIGURACION DE RUTAS
 # =====================================
-
-# PAGINA PRINCIPAL
 
 DirectoryIndex index.html
 
-
-# =====================================
-# DESACTIVAR LISTADO DE DIRECTORIOS
-# =====================================
-
 Options -Indexes
-
-
-# =====================================
-# CONFIGURACION DE RUTAS
-# =====================================
 
 <IfModule mod_rewrite.c>
 
     RewriteEngine On
 
-
-    # NO MODIFICAR ARCHIVOS EXISTENTES
-
+    # No modificar archivos ni carpetas existentes
     RewriteCond %{REQUEST_FILENAME} -f [OR]
     RewriteCond %{REQUEST_FILENAME} -d
     RewriteRule ^ - [L]
 
+    # INICIO
+    RewriteRule ^inicio/?$ index.html [L,NC]
 
-    # RUTA DE ENTRENAMIENTO
+    # NUTRICION
+    RewriteRule ^nutricion/?$ page/nutricion.html [L,NC]
 
+    # ENTRENAMIENTO
     RewriteRule ^entrenamiento/?$ page/entrenamiento.html [L,NC]
 
-
-    # RUTA DE DEPORTE
-
+    # DEPORTE
     RewriteRule ^deporte/?$ page/deporte.html [L,NC]
 
-
-    # RUTA DE SALUD
-
+    # SALUD
     RewriteRule ^salud/?$ page/salud.html [L,NC]
 
-
-    # RUTA DE CONTACTO
-
+    # CONTACTO
     RewriteRule ^contacto/?$ page/contactame.html [L,NC]
-
 
 </IfModule>
